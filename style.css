@@ -1,8 +1,28 @@
 body {
-  background-color: #faf8ef; }
-
-h1 {
-  font-size: 80px;
-  font-weight: bold; }
+  background-color: #faf8ef;
+  box-sizing: border-box;
+  border: 1px solid blue; }
+  body h1 {
+    font-size: 80px;
+    font-weight: bold; }
+  body p {
+    font-size: 2em;
+    display: inline-block;
+    padding-right: 30px; }
+  body .grid-container {
+    width: 800px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 auto;
+    border: 1px solid red; }
+    body .grid-container .row {
+      margin: 0 5px 10px 5px;
+      border: 1px solid  lightgreen; }
+      body .grid-container .row .grid-cell {
+        display: inline-block;
+        width: 24%;
+        height: 40px;
+        border: 1px solid red; }
 
 /*# sourceMappingURL=style.css.map */

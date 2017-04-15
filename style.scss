@@ -1,8 +1,39 @@
-body{
-    background-color: #faf8ef;
-}
+$body-background-color: #faf8ef;
 
-h1{
-    font-size: 80px;
-    font-weight: bold;
+body{
+    background-color: $body-background-color;
+    box-sizing: border-box;
+    border: 1px solid blue;
+
+    h1{
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 2em;
+        display: inline-block;
+        padding-right: 30px;
+    }
+
+    .grid-container{
+        width: 800px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        margin: 0 auto;
+        border: 1px solid red;
+        .row{
+            margin: 0 5px 10px 5px;
+            border: 1px solid  lightgreen;
+            .grid-cell{
+                display: inline-block;
+                 width: 24%;
+                 height: 40px;
+                 border: 1px solid red;
+            }
+        }
+    }
+
+    
 }
