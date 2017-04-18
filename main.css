@@ -17,15 +17,21 @@ p {
   width: 500px;
   height: 500px;
   margin: 50px auto;
-  padding: 15px;
   box-sizing: border-box; }
   .big-container .grid-container {
     border-radius: 6px;
-    background-color: #bbada0;
+    padding: 15px;
+    background-color: #abcdef;
     z-index: 100; }
     .big-container .grid-container .row {
       margin-bottom: 15px;
       box-sizing: border-box; }
+      .big-container .grid-container .row:last-child {
+        margin-bottom: 0; }
+      .big-container .grid-container .row:after {
+        content: '';
+        display: block;
+        clear: both; }
       .big-container .grid-container .row .grid-cell {
         width: 106.25px;
         height: 106.25px;
@@ -38,5 +44,9 @@ p {
         text-align: center; }
         .big-container .grid-container .row .grid-cell:last-child {
           margin-right: 0; }
+        .big-container .grid-container .row .grid-cell:after {
+          content: '';
+          display: block;
+          clear: both; }
 
 /*# sourceMappingURL=main.css.map */

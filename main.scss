@@ -1,6 +1,6 @@
 $body-background-color: #faf8ef;
 $tile-color: #eee4da;
-
+$padding-color: #abcdef;
 
 $grid-width: 500px;
 $grid-height: 500px;
@@ -34,18 +34,26 @@ p{
         width: $grid-width;
         height: $grid-height;
         margin: 50px auto;
-        padding: $grid-spacing;
         box-sizing: border-box;
     .grid-container{
         border-radius: $grid-container-radius;
-        // margin: 0 auto;
-        background-color: #bbada0;
+        padding: $grid-spacing;
+        background-color: #abcdef;
         z-index: 100;
-        // border: 1px solid red;
         .row{
 
-            margin-bottom: 15px;
+            margin-bottom: $grid-spacing;
             box-sizing: border-box;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
 
             .grid-cell{
                 width: $tile-size;
@@ -61,6 +69,13 @@ p{
                 &:last-child{
                     margin-right: 0;
                 }
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+
             }
         }
     }
