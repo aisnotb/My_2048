@@ -1,39 +1,67 @@
 $body-background-color: #faf8ef;
+$tile-color: #eee4da;
+
+
+$grid-width: 500px;
+$grid-height: 500px;
+$grid-spacing: 15px;
+
+$tile-border-radius: 3px;
+$grid-container-radius: $tile-border-radius * 2;
+
+$grid-row-cells: 4;
+$tile-size: ($grid-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 
 body{
     background-color: $body-background-color;
-    box-sizing: border-box;
     border: 1px solid blue;
+    margin: 0;
+    padding: 0;
+}
 
-    h1{
-        font-size: 80px;
-        font-weight: bold;
-    }
+h1{
+    font-size: 80px;
+    font-weight: bold;
+}
 
-    p{
-        font-size: 2em;
-        display: inline-block;
-        padding-right: 30px;
-    }
+p{
+    font-size: 2em;
+    display: inline-block;
+    padding-right: 30px;
+}
 
+.big-container{
+        width: $grid-width;
+        height: $grid-height;
+        margin: 50px auto;
+        padding: $grid-spacing;
+        box-sizing: border-box;
     .grid-container{
-        width: 800px;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        margin: 0 auto;
-        border: 1px solid red;
+        border-radius: $grid-container-radius;
+        // margin: 0 auto;
+        background-color: #bbada0;
+        z-index: 100;
+        // border: 1px solid red;
         .row{
-            margin: 0 5px 10px 5px;
-            border: 1px solid  lightgreen;
+        
+            margin-bottom: 15px;
+            box-sizing: border-box;
+
             .grid-cell{
+                width: $tile-size;
+                height: $tile-size;
+                background-color: $tile-color;
+                margin-right: 15px;
+                float: left;
                 display: inline-block;
-                 width: 24%;
-                 height: 40px;
-                 border: 1px solid red;
+                box-sizing: border-box;
+                // padding: $grid-spacing;
+                border-radius: $tile-border-radius;
+                text-align: center;
+                &:last-child{
+                    margin-right: 0;
+                }
             }
         }
     }
-
-    
 }
