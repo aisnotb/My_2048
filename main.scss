@@ -66,6 +66,7 @@ p{
                 // padding: $grid-spacing;
                 border-radius: $tile-border-radius;
                 text-align: center;
+                z-index: 1000;
                 &:last-child{
                     margin-right: 0;
                 }
@@ -75,7 +76,15 @@ p{
                     clear: both;
                 }
 
-
+                @for $x from 1 through $grid-row-cells {
+                    @for $y from 1 through $grid-row-cells{
+                        &.tile-position-#{$x}-#{$y}{
+                            position: absolute;
+                            left: ($tile-size + $grid-spacing) * ($x - 1);
+                            top:  ($tile-size + $grid-spacing)  * ($y - 1);
+                        }
+                    }
+                }
             }
         }
     }

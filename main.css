@@ -41,12 +41,77 @@ p {
         display: inline-block;
         box-sizing: border-box;
         border-radius: 3px;
-        text-align: center; }
+        text-align: center;
+        z-index: 1000; }
         .big-container .grid-container .row .grid-cell:last-child {
           margin-right: 0; }
         .big-container .grid-container .row .grid-cell:after {
           content: '';
           display: block;
           clear: both; }
+        .big-container .grid-container .row .grid-cell.tile-position-1-1 {
+          position: absolute;
+          left: 0px;
+          top: 0px; }
+        .big-container .grid-container .row .grid-cell.tile-position-1-2 {
+          position: absolute;
+          left: 0px;
+          top: 121.25px; }
+        .big-container .grid-container .row .grid-cell.tile-position-1-3 {
+          position: absolute;
+          left: 0px;
+          top: 242.5px; }
+        .big-container .grid-container .row .grid-cell.tile-position-1-4 {
+          position: absolute;
+          left: 0px;
+          top: 363.75px; }
+        .big-container .grid-container .row .grid-cell.tile-position-2-1 {
+          position: absolute;
+          left: 121.25px;
+          top: 0px; }
+        .big-container .grid-container .row .grid-cell.tile-position-2-2 {
+          position: absolute;
+          left: 121.25px;
+          top: 121.25px; }
+        .big-container .grid-container .row .grid-cell.tile-position-2-3 {
+          position: absolute;
+          left: 121.25px;
+          top: 242.5px; }
+        .big-container .grid-container .row .grid-cell.tile-position-2-4 {
+          position: absolute;
+          left: 121.25px;
+          top: 363.75px; }
+        .big-container .grid-container .row .grid-cell.tile-position-3-1 {
+          position: absolute;
+          left: 242.5px;
+          top: 0px; }
+        .big-container .grid-container .row .grid-cell.tile-position-3-2 {
+          position: absolute;
+          left: 242.5px;
+          top: 121.25px; }
+        .big-container .grid-container .row .grid-cell.tile-position-3-3 {
+          position: absolute;
+          left: 242.5px;
+          top: 242.5px; }
+        .big-container .grid-container .row .grid-cell.tile-position-3-4 {
+          position: absolute;
+          left: 242.5px;
+          top: 363.75px; }
+        .big-container .grid-container .row .grid-cell.tile-position-4-1 {
+          position: absolute;
+          left: 363.75px;
+          top: 0px; }
+        .big-container .grid-container .row .grid-cell.tile-position-4-2 {
+          position: absolute;
+          left: 363.75px;
+          top: 121.25px; }
+        .big-container .grid-container .row .grid-cell.tile-position-4-3 {
+          position: absolute;
+          left: 363.75px;
+          top: 242.5px; }
+        .big-container .grid-container .row .grid-cell.tile-position-4-4 {
+          position: absolute;
+          left: 363.75px;
+          top: 363.75px; }
 
 /*# sourceMappingURL=main.css.map */
