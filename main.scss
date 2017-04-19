@@ -1,6 +1,7 @@
 $body-background-color: #faf8ef;
 $tile-color: #eee4da;
 $padding-color: #abcdef;
+$tile-gold-color: #edc22e;
 
 $grid-width: 500px;
 $grid-height: 500px;
@@ -35,57 +36,96 @@ p{
         height: $grid-height;
         margin: 50px auto;
         box-sizing: border-box;
-    .grid-container{
-        border-radius: $grid-container-radius;
-        padding: $grid-spacing;
-        background-color: #abcdef;
-        z-index: 100;
-        .row{
+}
 
-            margin-bottom: $grid-spacing;
-            box-sizing: border-box;
+.grid-container{
+    border-radius: $grid-container-radius;
+    padding: $grid-spacing;
+    background-color: #abcdef;
+    z-index: 100;
+    .row{
+        margin-bottom: $grid-spacing;
+        box-sizing: border-box;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}
 
-            &:last-child{
-                margin-bottom: 0;
-            }
+.tile-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
-            &:after{
-                content: '';
-                display: block;
-                clear: both;
-            }
+.grid-cell{
+    width: $tile-size;
+    height: $tile-size;
+    background-color: $tile-color;
+    margin-right: 15px;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: $tile-border-radius;
+    text-align: center;
+    z-index: 2;
+    &:last-child{
+        margin-right: 0;
+    }
 
-            .grid-cell{
-                width: $tile-size;
-                height: $tile-size;
-                background-color: $tile-color;
-                margin-right: 15px;
-                float: left;
-                display: inline-block;
-                box-sizing: border-box;
-                // padding: $grid-spacing;
-                border-radius: $tile-border-radius;
-                text-align: center;
-                z-index: 1000;
-                &:last-child{
-                    margin-right: 0;
-                }
-                &:after{
-                    content: '';
-                    display: block;
-                    clear: both;
-                }
-
-                @for $x from 1 through $grid-row-cells {
-                    @for $y from 1 through $grid-row-cells{
-                        &.tile-position-#{$x}-#{$y}{
-                            position: absolute;
-                            left: ($tile-size + $grid-spacing) * ($x - 1);
-                            top:  ($tile-size + $grid-spacing)  * ($y - 1);
-                        }
-                    }
-                }
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    //set position for each tile
+    @for $x from 1 through $grid-row-cells {
+        @for $y from 1 through $grid-row-cells{
+            &.tile-position-#{$x}-#{$y}{
+                position: absolute;
+                left: ($tile-size + $grid-spacing) * ($x - 1);
+                top:  ($tile-size + $grid-spacing)  * ($y - 1);
             }
         }
+    }
+    //set font and color for different tiles
+    $base: 2;
+    $exponent: 1;
+    $limit: 11;
+
+    //helper function
+
+    @function pow($number, $exponent) {
+        $value: 1;
+
+        @if $exponent > 0 {
+            @for $i from 1 through $exponent {
+                $value: $value * $number;
+            }
+        }
+
+        @return $value;
+    }
+
+    @while $exponent <= $limit {
+        $power: pow($base, $exponent);
+        $percent: (($exponent - 1) / $limit) * 100;
+
+        &.tile-#{$power} {
+            background: mix($tile-gold-color, $tile-color, $percent);
+            @if $power >= 100 and $power < 1000 {
+                font-size: 45px;
+            }@else if $power >=1000 {
+                font-size: 35px;
+            }
+        }
+
+        $exponent: $exponent + 1;
     }
 }
