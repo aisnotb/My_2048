@@ -1,3 +1,4 @@
+@import "helper";
 $body-background-color: #faf8ef;
 $tile-color: #eee4da;
 $padding-color: #abcdef;
@@ -84,6 +85,10 @@ p{
         display: block;
         clear: both;
     }
+	
+    @include transition(200ms ease);
+    @include transition-property(top, left);
+
     //set position for each tile
     @for $x from 1 through $grid-row-cells {
         @for $y from 1 through $grid-row-cells{

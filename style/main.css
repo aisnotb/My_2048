@@ -50,7 +50,12 @@ p {
   box-sizing: border-box;
   border-radius: 3px;
   text-align: center;
-  z-index: 2; }
+  z-index: 2;
+  transition: 200ms ease;
+  -moz-transition: 200ms ease;
+  -webkit-transition: 200ms ease;
+  -webkit-transition-property: top, left;
+  -moz-transition-property: top, left; }
   .grid-cell:last-child {
     margin-right: 0; }
   .grid-cell:after {

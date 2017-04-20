@@ -1,0 +1,11 @@
+@mixin transition($args...){
+	transition: $args;
+	-moz-transition: $args;
+	-webkit-transition: $args;
+}
+
+@mixin transition-property($args...){
+	-webkit-transition-property: $args;
+	-moz-transition-property: $args
+
+}
