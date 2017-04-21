@@ -8,6 +8,9 @@ $grid-width: 500px;
 $grid-height: 500px;
 $grid-spacing: 15px;
 
+$big-font-size-45: 45px;
+$small-font-size-35:35px;
+
 $tile-border-radius: 3px;
 $grid-container-radius: $tile-border-radius * 2;
 
@@ -75,6 +78,10 @@ p{
     box-sizing: border-box;
     border-radius: $tile-border-radius;
     text-align: center;
+    line-height: $tile-size; //this is quite useful but i dont quite get it
+    font-weight: bold;
+    font-size: $big-font-size-45;
+    color: #fff;
     z-index: 2;
     &:last-child{
         margin-right: 0;
@@ -103,7 +110,6 @@ p{
     $base: 2;
     $exponent: 1;
     $limit: 11;
-
     //helper function
 
     @function pow($number, $exponent) {
