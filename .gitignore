@@ -1,3 +1,5 @@
 .sass_cache
 style.css.map
 .DS_Store
+*.swo
+*.swp

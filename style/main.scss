@@ -37,13 +37,13 @@ p{
         height: $grid-height;
         margin: 50px auto;
         box-sizing: border-box;
+        position: relative;
 }
 
 .grid-container{
     border-radius: $grid-container-radius;
     padding: $grid-spacing;
     background-color: #abcdef;
-    z-index: 100;
     .row{
         margin-bottom: $grid-spacing;
         box-sizing: border-box;
@@ -60,9 +60,9 @@ p{
 
 .tile-container{
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    top: $grid-spacing;
+    left: $grid-spacing;
+    z-index: 10;
 }
 
 .grid-cell{
@@ -85,7 +85,7 @@ p{
         display: block;
         clear: both;
     }
-	
+
     @include transition(200ms ease);
     @include transition-property(top, left);
 
