@@ -10,3 +10,8 @@
 －你可以（）（）（）（）
 
 This is a link connects to another **Website**<link>(wwww.google.com)
+
+
+I basiclly follow every step from this guy and learned a lot
+
+Thanks to github and all the people sharing their work
