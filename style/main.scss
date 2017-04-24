@@ -52,6 +52,8 @@ button{
         height: $grid-height;
         margin: 30px auto;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
         position: relative;
 }
 
@@ -93,6 +95,8 @@ div.title{
     .row{
         margin-bottom: $grid-spacing;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
         &:last-child{
             margin-bottom: 0;
         }
@@ -129,6 +133,8 @@ div.title{
     float: left;
     display: inline-block;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     border-radius: $tile-border-radius;
     text-align: center;
     line-height: $tile-size; //this is quite useful but i dont quite get it
