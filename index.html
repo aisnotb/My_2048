@@ -7,16 +7,21 @@
         <title>2048</title>
     </head>
     <body>
-            <h1>2048</h1>
-            <div>
-                <p>Join the numbers and get to the <b>2048 tiles!</b></p>
-                <button type="button" name="button">New Game</button>
+
+        <!-- still have one issue left to do . git stash at 12:01 -->
+            <div class="heading">
+                <div class="title" style="1px solid red">2048</div>
+                <div class="score-container">0</div>
             </div>
 
-            <div class="info">
-                <p>New : Get the new 2048 app for <a href="#">ios</a> and <a href="">Android!</a></p>
+            <div class="welcome-container">
+                <div id="join-game">Join the numbers and get to the <b>2048 tiles!</b></div>
+                <button id="new-game" name="button">New Game</button>
             </div>
 
+            <div class="welcome-container">
+                <p>New : Get the new 2048 app for <a href="#">ios</a> and <a href="#">Android!</a></p>
+            </div>
 
             <div class="big-container">
                 <div class="grid-container">
@@ -63,9 +68,9 @@
             </div>
 
   <div class="game-explaination">
-       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+       <p class="text-explaination"><strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong></p>
          <hr>
-         <p>Created by <a href="http://gabrielecirulli.com" target="_blank">Carson Liu.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 Atom.</a></p>
+       <p class="text-explaination">Created by <a href="http://gabrielecirulli.com" target="_blank">Carson Liu.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 Atom.</a></p>
   </div>
      <script src="js/game_controller.js"></script>
      <script src="js/tile.js"></script>

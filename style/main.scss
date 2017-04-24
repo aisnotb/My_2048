@@ -8,6 +8,8 @@ $grid-width: 500px;
 $grid-height: 500px;
 $grid-spacing: 15px;
 
+// this is git stash at 6:36 before dinner. let me go to get some food then come back
+
 $big-font-size-45: 45px;
 $small-font-size-35:35px;
 
@@ -19,28 +21,69 @@ $tile-size: ($grid-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-ce
 
 body{
     background-color: $body-background-color;
-    border: 1px solid blue;
     margin: 0;
     padding: 0;
 }
 
 h1{
-    font-size: 80px;
+    font-size: 50px;
     font-weight: bold;
 }
 
-p{
-    font-size: 2em;
+div#join-game{
+    // width: 70%;
+    // border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 15px;
     display: inline-block;
-    padding-right: 30px;
+    float: left;
+}
+
+button{
+    height: 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+    float: right;
 }
 
 .big-container{
         width: $grid-width;
         height: $grid-height;
-        margin: 50px auto;
+        margin: 30px auto;
         box-sizing: border-box;
         position: relative;
+}
+
+.heading{
+    @include welcome-container;
+    height: 60px;
+}
+
+div.title{
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    float: left;
+}
+
+.score-container{
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    float: right;
+}
+
+.score-container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.welcome-container{
+    @include welcome-container;
 }
 
 .grid-container{
@@ -67,6 +110,16 @@ p{
     left: $grid-spacing;
     z-index: 10;
 }
+
+.game-explaination{
+    @include welcome-container;
+    height: 80px;
+}
+
+.text-explaination{
+    line-height: 1.65;
+}
+
 
 .grid-cell{
     width: $tile-size;
