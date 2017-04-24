@@ -17,7 +17,6 @@ gameController.prototype.addStartTiles = function(){
 
 gameController.prototype.addTile = function(){
 
-
 };
 
 gameController.prototype.randomCell= function(){
@@ -31,7 +30,6 @@ gameController.prototype.cellOccupied = function(){
 gameController.prototype.insertTile = function(){
 
 };
-
 
 gameController.prototype.update = function(){
 
